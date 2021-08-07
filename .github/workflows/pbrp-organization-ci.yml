@@ -43,10 +43,7 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then echo "TEST_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
-              echo "USE_SECRET_BOOTABLE=true"  >> $GITHUB_ENV
-              git config --global user.email pitchblackrecovery@gmail.com
-              git config --global user.name pbrp-bot
-              echo "machine github.com login $GH_SECRET_TOKEN password x-oauth-basic" > $HOME/.netrc
+              
 
        - name: Recovery Compilation
          uses: PitchBlackRecoveryProject/Recovery-Compiler@production
